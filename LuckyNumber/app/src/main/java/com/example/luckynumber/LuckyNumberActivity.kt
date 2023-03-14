@@ -2,6 +2,8 @@ package com.example.luckynumber
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -48,5 +50,21 @@ class LuckyNumberActivity : AppCompatActivity() {
         intent.putExtra(Intent.EXTRA_SUBJECT, "$name is lucky today")
         intent.putExtra(Intent.EXTRA_TEXT, "His lucky number is $num")
         startActivity(intent)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.layout_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.share_item -> {
+                val name = intent?.extras?.getString(LUCKY_NUMBER).toString()
+                shareData(name, currentNumber)
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
