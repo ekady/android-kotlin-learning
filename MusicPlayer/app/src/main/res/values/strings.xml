@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="music_player_app">Music Player</string>
+    <string name="song_title">Song Title</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="play">Play</string>
+    <string name="logo">Logo</string>
+    <string name="pause">Pause</string>
+    <string name="_00_00">00:00</string>
+</resources>
