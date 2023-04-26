@@ -15,6 +15,7 @@ class LetterListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private var isLinearLayout = true
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -39,6 +40,7 @@ class LetterListFragment : Fragment() {
         _binding = null
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.layout_menu, menu)
 
@@ -60,6 +62,7 @@ class LetterListFragment : Fragment() {
         else ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_linear_layout)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_switch_layout -> {
